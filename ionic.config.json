@@ -1,0 +1,7 @@
+{
+  "name": "pokepedia-ionic-new",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
