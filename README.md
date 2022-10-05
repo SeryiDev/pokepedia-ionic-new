@@ -1,5 +1,5 @@
 # 📱 Pokepedia Ionic
-Pokepedia Ionic es una aplicación que te permite ver las diferentes especies de Pokémon y los datos de cada uno de ellos.
+Pokepedia Ionic es una aplicación que te permite ver las diferentes especies de Pokémon y los datos de cada uno de ellos. En un futuro te permitirá loguearte, tener una lista de favoritos y probablemente más.
 
 # 🔌 Instalación
 ### Opción 1:
