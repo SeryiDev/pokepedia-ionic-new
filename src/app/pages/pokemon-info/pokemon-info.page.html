@@ -1,0 +1,34 @@
+<!-- Header with menu -->
+<ion-header>
+  <ion-toolbar>
+    <ion-img id="logo" src="../../../assets/images/pokepedia_logo.png"></ion-img>
+    <ion-buttons slot="end">
+      <!-- Menu preset from main-menu.component -->
+      <ion-menu-button menu="mainMenu" color="primary"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<!-- Content that appears when the pokemon is loaded -->
+<ion-content *ngIf="pokemon.id">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card class="ion-text-center">
+          <ion-card-header>
+            <ion-img src="{{pokemon.sprites.other.dream_world.front_default}}"></ion-img>
+            <ion-card-title>{{formatString(pokemon.name)}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item class="ion-text-center">
+          <ion-label>{{formatString(pokemon.abilities[0].ability.name)}}</ion-label>
+          <ion-label>{{formatString(pokemon.abilities[1].ability.name)}}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

@@ -8,9 +8,18 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'pokedex',
     pathMatch: 'full'
   },
+  {
+    path: 'pokedex',
+    loadChildren: () => import('./pages/pokedex/pokedex.module').then( m => m.PokedexPageModule)
+  },
+  {
+    path: 'pokemon-info/:name',
+    loadChildren: () => import('./pages/pokemon-info/pokemon-info.module').then( m => m.PokemonInfoPageModule)
+  },
+
 ];
 
 @NgModule({
