@@ -16,12 +16,8 @@
       <ion-col size="12" size-sm="6" size-md="4" size-lg="3" *ngFor="let pokemon of pokemonsList">
         <ion-card [routerLink]="['/pokemon-info/' + pokemon.name]">
           <ion-card-header>
-            <ion-card-title>Title</ion-card-title>
-            <ion-card-subtitle>Subtitle</ion-card-subtitle>
+            <ion-card-title>{{generalService.formatString(pokemon.name)}}</ion-card-title>
           </ion-card-header>
-          <ion-card-content>
-            {{generalService.formatName(pokemon.name)}}
-          </ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
