@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { GeneralService } from 'src/app/services/general.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-pokedex',
@@ -15,7 +16,7 @@ export class PokedexPage implements OnInit {
   constructor (private http: HttpClient, public generalService: GeneralService) {}
 
   ngOnInit() {
-    this.http.get<any>('https://pokeapi.co/api/v2/pokemon')
+    this.http.get<any>(environment.urlPokemonList)
     .subscribe(res => {
       this.pokemonsList = res.results
       console.log(this.pokemonsList)
